@@ -1,0 +1,1467 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>미디어 & 스트리밍 영어 표현 복습 스튜디오 (Media English Review)</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;500;600;700;800&display=swap');
+    body {
+      font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+    }
+    .flip-card {
+      perspective: 1000px;
+    }
+    .flip-card-inner {
+      transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+      transform-style: preserve-3d;
+    }
+    .flip-card.flipped .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+    .flip-card-front, .flip-card-back {
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+    }
+    .flip-card-back {
+      transform: rotateY(180deg);
+    }
+    .pulse-ring {
+      animation: pulse-ring 1.8s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+    }
+    @keyframes pulse-ring {
+      0% { transform: scale(0.95); opacity: 0.8; }
+      50% { transform: scale(1.15); opacity: 0.4; }
+      100% { transform: scale(0.95); opacity: 0.8; }
+    }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col selection:bg-indigo-500 selection:text-white">
+
+  <!-- Top Header Navigation -->
+  <header class="border-b border-slate-800/80 bg-slate-900/60 backdrop-blur-md sticky top-0 z-40">
+    <div class="max-w-5xl mx-auto px-4 py-3 sm:py-4 flex flex-wrap items-center justify-between gap-3">
+      <div class="flex items-center space-x-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 to-violet-500 flex items-center justify-center shadow-lg shadow-indigo-500/20 text-white font-bold text-lg">
+          EN
+        </div>
+        <div>
+          <h1 class="text-base sm:text-lg font-bold text-white tracking-tight flex items-center gap-2">
+            미디어 영어 표현 스튜디오
+            <span class="text-xs font-semibold px-2 py-0.5 rounded-full bg-indigo-500/20 text-indigo-400 border border-indigo-500/30">24문장 마스터</span>
+          </h1>
+          <p class="text-xs text-slate-400">스트리밍 · 리부트 · 더빙 · 자막 · 몰아보기 · 여행 핵심 문장</p>
+        </div>
+      </div>
+
+      <!-- Navigation Tabs -->
+      <nav class="flex items-center bg-slate-800/90 p-1 rounded-xl border border-slate-700/60 text-xs sm:text-sm font-medium">
+        <button id="nav-typing" class="nav-tab px-3 py-1.5 rounded-lg text-white bg-indigo-600 shadow transition-all flex items-center gap-1.5">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+          <span>타이핑 연습</span>
+        </button>
+        <button id="nav-speaking" class="nav-tab px-3 py-1.5 rounded-lg text-slate-400 hover:text-white transition-all flex items-center gap-1.5">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"/></svg>
+          <span>음성 스피킹</span>
+        </button>
+        <button id="nav-flashcard" class="nav-tab px-3 py-1.5 rounded-lg text-slate-400 hover:text-white transition-all flex items-center gap-1.5">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+          <span>플래시카드</span>
+        </button>
+        <button id="nav-list" class="nav-tab px-3 py-1.5 rounded-lg text-slate-400 hover:text-white transition-all flex items-center gap-1.5">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"/></svg>
+          <span>전체 목록</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="max-w-5xl mx-auto px-4 py-6 flex-1 w-full flex flex-col gap-6">
+
+    <!-- Category Filter & Stats Banner -->
+    <section class="flex flex-wrap items-center justify-between gap-3 bg-slate-900/40 p-3 rounded-2xl border border-slate-800/80">
+      <!-- Category Badges -->
+      <div class="flex flex-wrap items-center gap-1.5" id="category-filter-bar">
+        <button data-cat="all" class="cat-filter-btn px-3 py-1 rounded-lg text-xs font-semibold bg-indigo-500/20 text-indigo-300 border border-indigo-500/40 transition">전체 (24)</button>
+        <button data-cat="Streaming" class="cat-filter-btn px-3 py-1 rounded-lg text-xs font-semibold bg-slate-800/70 text-slate-300 border border-slate-700/50 hover:bg-slate-700 transition">스트리밍 (3)</button>
+        <button data-cat="Reboots" class="cat-filter-btn px-3 py-1 rounded-lg text-xs font-semibold bg-slate-800/70 text-slate-300 border border-slate-700/50 hover:bg-slate-700 transition">리부트 (2)</button>
+        <button data-cat="Dubbing" class="cat-filter-btn px-3 py-1 rounded-lg text-xs font-semibold bg-slate-800/70 text-slate-300 border border-slate-700/50 hover:bg-slate-700 transition">더빙 (2)</button>
+        <button data-cat="Subtitles" class="cat-filter-btn px-3 py-1 rounded-lg text-xs font-semibold bg-slate-800/70 text-slate-300 border border-slate-700/50 hover:bg-slate-700 transition">자막 (2)</button>
+        <button data-cat="Binge-watching" class="cat-filter-btn px-3 py-1 rounded-lg text-xs font-semibold bg-slate-800/70 text-slate-300 border border-slate-700/50 hover:bg-slate-700 transition">몰아보기 (5)</button>
+        <button data-cat="Travel" class="cat-filter-btn px-3 py-1 rounded-lg text-xs font-semibold bg-slate-800/70 text-slate-300 border border-slate-700/50 hover:bg-slate-700 transition">여행 (10)</button>
+      </div>
+
+      <!-- Quick Stats & Settings -->
+      <div class="flex items-center gap-3 text-xs text-slate-400">
+        <div class="flex items-center gap-1.5">
+          <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+          <span>정답률: <strong id="stat-accuracy" class="text-white">0%</strong></span>
+        </div>
+        <div class="h-3 w-px bg-slate-700"></div>
+        <div>
+          <span>완료: <strong id="stat-completed" class="text-white">0</strong> / <span id="stat-total">24</span></span>
+        </div>
+        <div class="h-3 w-px bg-slate-700"></div>
+        <!-- Global Shuffle toggle -->
+        <button id="global-shuffle-toggle" class="px-2.5 py-1 rounded-lg bg-slate-800 border border-slate-700 hover:text-white transition flex items-center gap-1.5" title="셔플 모드 켜기/끄기">
+          <svg class="w-3.5 h-3.5 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 3h5v5M4 20L21 3M21 16v5h-5M15 15l6 6M4 4l5 5"/></svg>
+          <span>셔플: <strong id="global-shuffle-val" class="text-slate-300">OFF</strong></span>
+        </button>
+        <div class="h-3 w-px bg-slate-700"></div>
+        <!-- TTS speed toggle -->
+        <button id="tts-speed-toggle" class="px-2 py-0.5 rounded bg-slate-800 border border-slate-700 hover:text-white transition" title="발음 재생 속도 전환">
+          속도: <span id="tts-speed-val" class="text-indigo-400 font-bold">1.0x</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- VIEW 1: TYPING & PRACTICE VIEW -->
+    <div id="view-typing" class="view-panel space-y-4">
+      <!-- Progress Bar -->
+      <div class="w-full bg-slate-800 rounded-full h-1.5 overflow-hidden">
+        <div id="quiz-progress-bar" class="bg-indigo-500 h-1.5 transition-all duration-300" style="width: 7%;"></div>
+      </div>
+
+      <!-- Question Card -->
+      <div class="bg-slate-900/90 rounded-3xl border border-slate-800 p-6 sm:p-8 shadow-xl relative overflow-hidden">
+        <!-- Background Accent Glow -->
+        <div class="absolute -right-20 -top-20 w-60 h-60 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <!-- Card Header Meta -->
+        <div class="flex items-center justify-between mb-4">
+          <div class="flex items-center gap-2">
+            <span id="current-badge-cat" class="px-3 py-1 rounded-full text-xs font-semibold bg-indigo-500/20 text-indigo-400 border border-indigo-500/30">
+              스트리밍
+            </span>
+            <span id="current-index-label" class="text-xs text-slate-400 font-medium">
+              문제 1 / 24
+            </span>
+          </div>
+
+          <div class="flex items-center gap-2">
+            <button id="btn-toggle-bookmark" class="p-2 rounded-xl bg-slate-800/80 text-slate-400 hover:text-amber-400 hover:bg-slate-800 transition" title="중요 문장 북마크">
+              <svg id="star-icon" class="w-5 h-5 fill-none stroke-currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/></svg>
+            </button>
+            <button id="btn-play-tts" class="p-2 rounded-xl bg-indigo-600/20 text-indigo-400 hover:bg-indigo-600 hover:text-white transition flex items-center gap-1.5 text-xs font-semibold px-3" title="정답 영어 발음 듣기">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"/></svg>
+              <span>발음 듣기</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Korean Prompt -->
+        <div class="mb-6">
+          <p class="text-xs uppercase tracking-wider text-slate-400 font-semibold mb-1">제시된 우리말 문장</p>
+          <h2 id="korean-prompt-text" class="text-xl sm:text-2xl md:text-3xl font-extrabold text-white leading-relaxed tracking-tight">
+            스트리밍은 양날의 검이야.
+          </h2>
+        </div>
+
+        <!-- Hint Box (Collapsible) -->
+        <div id="hint-box" class="hidden mb-5 p-3.5 rounded-2xl bg-amber-500/10 border border-amber-500/20 text-amber-200 text-sm">
+          <div class="flex items-start gap-2">
+            <svg class="w-5 h-5 text-amber-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <div class="space-y-1">
+              <p class="font-semibold text-xs text-amber-300">💡 힌트</p>
+              <p id="hint-first-letter" class="font-mono text-amber-100 tracking-wide text-xs sm:text-sm"></p>
+              <p id="hint-key-words" class="text-xs text-amber-300/80"></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Typing Input Form -->
+        <div class="space-y-3">
+          <label for="typing-input" class="block text-xs font-semibold text-slate-400">
+            영어 문장을 직접 입력하세요 <span class="text-slate-500">(대소문자 및 문장부호 무관 유연 채점)</span>
+          </label>
+          <div class="relative">
+            <textarea id="typing-input" rows="3" placeholder="여기에 영어 문장을 타이핑하세요..." class="w-full bg-slate-950/80 border border-slate-700/80 rounded-2xl p-4 text-base sm:text-lg text-white placeholder-slate-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition resize-none"></textarea>
+          </div>
+
+          <div class="flex flex-wrap items-center justify-between gap-3 pt-1">
+            <div class="flex items-center gap-2">
+              <button id="btn-show-hint" class="px-3 py-2 rounded-xl text-xs font-medium bg-slate-800 text-slate-300 hover:bg-slate-700 hover:text-white transition flex items-center gap-1.5">
+                <svg class="w-4 h-4 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+                <span>힌트 보기</span>
+              </button>
+              <button id="btn-clear-input" class="px-3 py-2 rounded-xl text-xs font-medium bg-slate-800 text-slate-400 hover:bg-slate-700 hover:text-white transition">
+                초기화
+              </button>
+            </div>
+
+            <div class="flex items-center gap-2">
+              <button id="btn-reveal-answer" class="px-4 py-2 rounded-xl text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 transition">
+                정답 바로보기
+              </button>
+              <button id="btn-submit-answer" class="px-5 py-2.5 rounded-xl text-sm font-bold bg-indigo-600 hover:bg-indigo-500 text-white shadow-lg shadow-indigo-600/30 transition flex items-center gap-2">
+                <span>정답 확인</span>
+                <kbd class="hidden sm:inline-block px-1.5 py-0.5 text-[10px] bg-indigo-800/60 rounded border border-indigo-400/30">Enter</kbd>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Feedback & Evaluation Container (Appears after checking) -->
+        <div id="feedback-panel" class="hidden mt-6 pt-6 border-t border-slate-800 space-y-4">
+          <!-- Accuracy Banner -->
+          <div id="feedback-banner" class="p-4 rounded-2xl flex items-center justify-between gap-3">
+            <div class="flex items-center gap-3">
+              <div id="feedback-icon-wrap" class="w-10 h-10 rounded-xl flex items-center justify-center font-bold text-lg"></div>
+              <div>
+                <h4 id="feedback-title" class="font-bold text-base text-white"></h4>
+                <p id="feedback-subtitle" class="text-xs text-slate-300"></p>
+              </div>
+            </div>
+            <div class="text-right">
+              <span class="text-xs text-slate-400 block">정확도</span>
+              <span id="feedback-score" class="text-xl sm:text-2xl font-black text-white"></span>
+            </div>
+          </div>
+
+          <!-- Diff Comparison -->
+          <div class="p-4 rounded-2xl bg-slate-950/70 border border-slate-800 space-y-3">
+            <div>
+              <span class="text-xs font-semibold text-slate-400">내가 입력한 문장:</span>
+              <p id="diff-user-text" class="text-sm font-medium mt-1 leading-relaxed"></p>
+            </div>
+            <div class="pt-2 border-t border-slate-800/80">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-semibold text-emerald-400">원문 모범 답안:</span>
+                <button id="btn-diff-play-tts" class="text-xs text-indigo-400 hover:text-indigo-300 flex items-center gap-1 font-medium">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"/></svg>
+                  <span>듣기</span>
+                </button>
+              </div>
+              <p id="diff-target-text" class="text-base font-bold text-white mt-1 leading-relaxed font-sans"></p>
+            </div>
+          </div>
+
+          <!-- Key Expression & Study Notes -->
+          <div class="p-4 rounded-2xl bg-indigo-950/20 border border-indigo-900/30 space-y-2">
+            <h5 class="text-xs font-bold text-indigo-300 uppercase tracking-wider flex items-center gap-1.5">
+              <span>📌 핵심 표현 및 학습 포인트</span>
+            </h5>
+            <div id="feedback-vocab-list" class="flex flex-wrap gap-2 pt-1"></div>
+            <p id="feedback-explanation" class="text-xs text-slate-300 leading-relaxed pt-2"></p>
+          </div>
+        </div>
+
+        <!-- Navigation Next/Prev Bar -->
+        <div class="flex items-center justify-between mt-8 pt-4 border-t border-slate-800">
+          <button id="btn-prev-question" class="px-4 py-2 rounded-xl text-xs font-semibold bg-slate-800/80 hover:bg-slate-700 text-slate-300 hover:text-white transition flex items-center gap-1.5">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+            <span>이전 문장</span>
+          </button>
+
+          <div class="flex items-center gap-2">
+            <button id="btn-shuffle-order" class="px-3 py-2 rounded-xl text-xs font-medium bg-slate-800/80 hover:bg-slate-700 text-slate-300 hover:text-white transition flex items-center gap-1.5" title="문제 순서 무작위 섞기">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 3h5v5M4 20L21 3M21 16v5h-5M15 15l6 6M4 4l5 5"/></svg>
+              <span>셔플</span>
+            </button>
+            <button id="btn-next-question" class="px-5 py-2.5 rounded-xl text-xs font-bold bg-indigo-600 hover:bg-indigo-500 text-white shadow transition flex items-center gap-1.5">
+              <span>다음 문장</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- VIEW 2: VOICE SPEAKING VIEW -->
+    <div id="view-speaking" class="view-panel hidden space-y-4">
+      <div class="bg-slate-900/90 rounded-3xl border border-slate-800 p-6 sm:p-8 shadow-xl text-center relative overflow-hidden">
+        <div class="absolute -left-20 -top-20 w-60 h-60 bg-violet-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-violet-500/20 text-violet-300 border border-violet-500/30 mb-4">
+          <span id="spk-badge-cat">스트리밍</span> · <span id="spk-index-label">문장 1 / 24</span>
+        </div>
+
+        <p class="text-xs uppercase tracking-wider text-slate-400 font-semibold mb-2">우리말 문장을 보고 영어로 소리 내어 말해보세요</p>
+        <h2 id="spk-korean-prompt" class="text-2xl sm:text-3xl font-extrabold text-white mb-6 leading-relaxed max-w-2xl mx-auto">
+          스트리밍은 양날의 검이야.
+        </h2>
+
+        <!-- Mic Action Center -->
+        <div class="my-8 flex flex-col items-center justify-center">
+          <div class="relative">
+            <div id="mic-pulse-ring" class="hidden absolute inset-0 rounded-full bg-indigo-500/30 pulse-ring"></div>
+            <button id="btn-spk-mic" class="relative z-10 w-24 h-24 rounded-full bg-gradient-to-tr from-indigo-600 to-violet-600 text-white flex items-center justify-center shadow-2xl shadow-indigo-500/40 hover:scale-105 active:scale-95 transition-all">
+              <svg id="mic-icon" class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"/></svg>
+            </button>
+          </div>
+          <p id="mic-status-label" class="text-sm font-medium text-slate-300 mt-4">
+            마이크 버튼을 누르고 영어로 발화하세요
+          </p>
+          <p class="text-xs text-slate-500 mt-1">
+            * 브라우저 음성 인식(STT)이 활성화되며 발화한 문장이 자동 인식됩니다.
+          </p>
+        </div>
+
+        <!-- Recognized Speech Result Box -->
+        <div class="max-w-xl mx-auto p-4 rounded-2xl bg-slate-950/80 border border-slate-800 text-left mb-6">
+          <div class="flex items-center justify-between mb-1">
+            <span class="text-xs font-semibold text-slate-400">인식된 음성:</span>
+            <span id="stt-confidence" class="text-[11px] text-slate-500">대기 중</span>
+          </div>
+          <p id="spk-recognized-text" class="text-base text-slate-400 italic min-h-[2.5rem] flex items-center">
+            (마이크를 누르고 말하면 여기에 텍스트가 표시됩니다)
+          </p>
+        </div>
+
+        <!-- Action Controls -->
+        <div class="flex flex-wrap items-center justify-center gap-3">
+          <button id="btn-spk-check" class="px-6 py-2.5 rounded-xl text-sm font-bold bg-indigo-600 hover:bg-indigo-500 text-white shadow-lg transition">
+            발음 결과 채점하기
+          </button>
+          <button id="btn-spk-listen-target" class="px-4 py-2.5 rounded-xl text-xs font-semibold bg-slate-800 text-slate-300 hover:text-white transition flex items-center gap-1.5">
+            <svg class="w-4 h-4 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"/></svg>
+            <span>모범 발음 듣기</span>
+          </button>
+          <button id="btn-spk-reveal" class="px-4 py-2.5 rounded-xl text-xs font-semibold bg-slate-800 text-slate-300 hover:text-white transition">
+            정답 문장 보기
+          </button>
+        </div>
+
+        <!-- Speaking Result Details -->
+        <div id="spk-result-panel" class="hidden mt-6 pt-6 border-t border-slate-800 max-w-xl mx-auto text-left space-y-3">
+          <div id="spk-score-banner" class="p-3.5 rounded-2xl flex items-center justify-between">
+            <div>
+              <span id="spk-score-title" class="font-bold text-sm text-white"></span>
+              <p id="spk-score-desc" class="text-xs text-slate-300"></p>
+            </div>
+            <span id="spk-score-percent" class="text-xl font-black text-white"></span>
+          </div>
+
+          <div class="p-3.5 rounded-2xl bg-slate-950 border border-slate-800">
+            <span class="text-xs text-emerald-400 font-semibold block mb-1">원문 영어 정답:</span>
+            <p id="spk-target-answer" class="text-base font-bold text-white"></p>
+          </div>
+        </div>
+
+        <!-- Nav -->
+        <div class="flex items-center justify-between mt-8 pt-4 border-t border-slate-800">
+          <button id="btn-spk-prev" class="px-4 py-2 rounded-xl text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-slate-300 transition">
+            이전 문장
+          </button>
+          <div class="flex items-center gap-2">
+            <button id="btn-spk-shuffle" class="px-3 py-2 rounded-xl text-xs font-medium bg-slate-800/80 hover:bg-slate-700 text-slate-300 hover:text-white transition flex items-center gap-1.5" title="문장 순서 무작위 섞기">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 3h5v5M4 20L21 3M21 16v5h-5M15 15l6 6M4 4l5 5"/></svg>
+              <span>셔플</span>
+            </button>
+            <button id="btn-spk-next" class="px-5 py-2.5 rounded-xl text-xs font-bold bg-indigo-600 hover:bg-indigo-500 text-white transition">
+              다음 문장으로
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- VIEW 3: FLASHCARD VIEW -->
+    <div id="view-flashcard" class="view-panel hidden space-y-4">
+      <div class="text-center mb-2">
+        <p class="text-xs text-slate-400">카드를 클릭(터치)하면 우리말과 영어 원문이 앞뒤로 뒤집힙니다.</p>
+      </div>
+
+      <div class="flex justify-center">
+        <div id="fc-container" class="flip-card w-full max-w-xl h-80 sm:h-96 cursor-pointer select-none">
+          <div class="flip-card-inner relative w-full h-full rounded-3xl shadow-2xl">
+            <!-- Front: Korean -->
+            <div class="flip-card-front absolute inset-0 bg-gradient-to-br from-slate-900 to-slate-950 border border-slate-800 rounded-3xl p-8 flex flex-col justify-between">
+              <div class="flex items-center justify-between">
+                <span id="fc-cat-badge" class="px-3 py-1 rounded-full text-xs font-semibold bg-indigo-500/20 text-indigo-400 border border-indigo-500/30">
+                  스트리밍
+                </span>
+                <span class="text-xs text-slate-400">앞면: 우리말</span>
+              </div>
+
+              <div class="my-auto text-center">
+                <h3 id="fc-korean-text" class="text-2xl sm:text-3xl font-extrabold text-white leading-relaxed">
+                  스트리밍은 양날의 검이야.
+                </h3>
+                <p class="text-xs text-slate-500 mt-4">카드를 클릭하여 영어 정답 확인 ↺</p>
+              </div>
+
+              <div class="text-xs text-slate-500 text-center">
+                탭하여 뒤집기
+              </div>
+            </div>
+
+            <!-- Back: English -->
+            <div class="flip-card-back absolute inset-0 bg-gradient-to-br from-indigo-950/60 to-slate-950 border border-indigo-500/40 rounded-3xl p-8 flex flex-col justify-between">
+              <div class="flex items-center justify-between">
+                <span class="px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
+                  뒷면: 영어 원문
+                </span>
+                <button id="btn-fc-audio" class="p-2 rounded-xl bg-indigo-600/30 text-indigo-300 hover:bg-indigo-600 hover:text-white transition" title="발음 듣기">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"/></svg>
+                </button>
+              </div>
+
+              <div class="my-auto text-center space-y-3">
+                <h3 id="fc-english-text" class="text-xl sm:text-2xl font-black text-white leading-relaxed">
+                  Streaming is a double-edged sword.
+                </h3>
+                <div id="fc-keyvocab-list" class="flex flex-wrap justify-center gap-1.5 pt-2"></div>
+              </div>
+
+              <div class="text-xs text-indigo-400/80 text-center">
+                다시 탭하면 우리말로 뒤집힙니다
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Flashcard Controls -->
+      <div class="flex flex-wrap items-center justify-center gap-3 pt-4">
+        <button id="btn-fc-prev" class="px-5 py-2.5 rounded-xl text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-slate-300 transition flex items-center gap-1">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+          <span>이전</span>
+        </button>
+        <span id="fc-counter" class="text-xs text-slate-400 font-semibold px-2">1 / 24</span>
+        <button id="btn-fc-shuffle" class="px-4 py-2.5 rounded-xl text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white transition flex items-center gap-1.5" title="카드 순서 무작위 섞기">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 3h5v5M4 20L21 3M21 16v5h-5M15 15l6 6M4 4l5 5"/></svg>
+          <span>셔플</span>
+        </button>
+        <button id="btn-fc-next" class="px-5 py-2.5 rounded-xl text-xs font-bold bg-indigo-600 hover:bg-indigo-500 text-white transition flex items-center gap-1">
+          <span>다음</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+    </div>
+
+
+    <!-- VIEW 4: ALL SENTENCES LIST VIEW -->
+    <div id="view-list" class="view-panel hidden space-y-4">
+      <!-- Search & Filters -->
+      <div class="flex flex-wrap items-center justify-between gap-3 bg-slate-900/80 p-4 rounded-2xl border border-slate-800">
+        <div class="relative flex-1 min-w-[200px]">
+          <svg class="w-4 h-4 text-slate-500 absolute left-3.5 top-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+          <input type="text" id="list-search-input" placeholder="한국어, 영어 또는 키워드 검색..." class="w-full bg-slate-950 border border-slate-700 rounded-xl pl-10 pr-4 py-2 text-xs sm:text-sm text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+        </div>
+        <div class="flex items-center gap-2">
+          <button id="btn-list-shuffle" class="px-3 py-2 rounded-xl text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 hover:text-white transition flex items-center gap-1.5" title="목록 순서 무작위 섞기">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 3h5v5M4 20L21 3M21 16v5h-5M15 15l6 6M4 4l5 5"/></svg>
+            <span>순서 섞기</span>
+          </button>
+          <button id="btn-list-play-all" class="px-3 py-2 rounded-xl text-xs font-semibold bg-indigo-600/30 text-indigo-300 hover:bg-indigo-600 hover:text-white transition flex items-center gap-1.5">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <span id="list-play-all-label">전체 연속 듣기</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Sentences Cards Grid -->
+      <div id="all-sentences-grid" class="grid grid-cols-1 gap-3">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none">
+    <div class="bg-slate-900 border border-slate-700 text-white px-4 py-2.5 rounded-xl shadow-2xl flex items-center gap-2 text-xs font-medium">
+      <span id="toast-icon">✨</span>
+      <span id="toast-msg">알림 메시지</span>
+    </div>
+  </div>
+
+  <!-- SCRIPT LOGIC -->
+  <script>
+    // 14 EXTRACTED SENTENCES DATA
+    const SENTENCES = [
+      {
+        id: 1,
+        category: "Streaming",
+        categoryKo: "스트리밍",
+        ko: "스트리밍은 양날의 검이야.",
+        en: "Streaming is a double-edged sword.",
+        keyVocab: [
+          { en: "double-edged sword", ko: "양날의 검 (장단점이 공존함)" }
+        ],
+        note: "어떤 대상이 장점과 위험을 동시에 지니고 있음을 비유할 때 가장 널리 쓰이는 표현입니다."
+      },
+      {
+        id: 2,
+        category: "Streaming",
+        categoryKo: "스트리밍",
+        ko: "스트리밍은 원할 때 유연하게 시청할 수 있게 해 줘.",
+        en: "Streaming offers a flexible viewing experience on demand.",
+        keyVocab: [
+          { en: "flexible", ko: "유연한, 자유로운" },
+          { en: "viewing experience", ko: "시청 경험" },
+          { en: "on demand", ko: "원할 때 언제든지 (주문형)" }
+        ],
+        note: "'on demand'는 사용자가 원할 때 즉각 이용할 수 있는 스트리밍 미디어의 핵심 특성을 나타냅니다."
+      },
+      {
+        id: 3,
+        category: "Streaming",
+        categoryKo: "스트리밍",
+        ko: "스트리밍은 정보 과부하와 선택 장애가 오는 것도 있어.",
+        en: "Streaming also comes with information overload and decision paralysis.",
+        keyVocab: [
+          { en: "comes with", ko: "~을 수반하다, 동반하다" },
+          { en: "information overload", ko: "정보 과부하" },
+          { en: "decision paralysis", ko: "결정 마비, 선택 장애" }
+        ],
+        note: "콘텐츠가 너무 많아 결정을 내리지 못하는 현상을 현대 영어로 'decision paralysis'라고 합니다."
+      },
+      {
+        id: 4,
+        category: "Reboots",
+        categoryKo: "리부트",
+        ko: "내 관점에서는, 리부트는 원작 이야기를 통해 기성 관객층을 끌어모으는 정말 좋은 방법이야.",
+        en: "From my point of view, reboots are a great way to attract the older audience for its original stories.",
+        keyVocab: [
+          { en: "from my point of view", ko: "내 관점에서는" },
+          { en: "reboots", ko: "리부트 (기존 시리즈의 재구성)" },
+          { en: "attract the older audience", ko: "기성/원작 관객층을 유치하다" },
+          { en: "original stories", ko: "원작 이야기" }
+        ],
+        note: "자신의 의견이나 시각을 논리적으로 제시할 때 'From my point of view'를 서두에 자주 씁니다."
+      },
+      {
+        id: 5,
+        category: "Reboots",
+        categoryKo: "리부트",
+        ko: "내 관점에서는, 리부트는 원작의 정신을 잘 살리지 못하는 경우가 많아.",
+        en: "From my point of view, reboots often fail to keep the original spirit.",
+        keyVocab: [
+          { en: "fail to keep", ko: "~을 지켜내지/살려내지 못하다" },
+          { en: "the original spirit", ko: "원작 고유의 정신/영혼/감성" }
+        ],
+        note: "원작 특유의 매력이나 본질적인 정체성을 'the original spirit'이라고 부릅니다."
+      },
+      {
+        id: 6,
+        category: "Dubbing",
+        categoryKo: "더빙",
+        ko: "내 경험상, 더빙은 문화적 뉘앙스를 덮어버려서 진정성이 떨어지게 만들어.",
+        en: "In my experience, dubbing makes it less authentic by brushing over cultural nuances.",
+        keyVocab: [
+          { en: "in my experience", ko: "내 경험상" },
+          { en: "less authentic", ko: "진정성이 떨어지는, 진짜 같지 않은" },
+          { en: "brush over", ko: "대충 넘어가다, 덮어버리다" },
+          { en: "cultural nuances", ko: "문화적 뉘앙스/미묘한 차이" }
+        ],
+        note: "'brush over'는 세밀한 디테일을 깊이 다루지 않고 가볍게 얼버무려 넘기는 뉘앙스의 구동사입니다."
+      },
+      {
+        id: 7,
+        category: "Dubbing",
+        categoryKo: "더빙",
+        ko: "내 경험상, 더빙은 목소리를 바꿔서 시각적인 부분에 더 집중하게 만들어.",
+        en: "In my experience, dubbing makes me focus on the visuals by swapping the voice.",
+        keyVocab: [
+          { en: "focus on the visuals", ko: "시각적인 요소/영상에 집중하다" },
+          { en: "swap the voice", ko: "목소리를 맞바꾸다/대체하다" }
+        ],
+        note: "'make + 목적어 + 동사원형' 사역 구조(makes me focus)와 'by + -ing' 수단 구조가 깔끔하게 쓰였습니다."
+      },
+      {
+        id: 8,
+        category: "Subtitles",
+        categoryKo: "자막",
+        ko: "내 경험상, 자막은 원래 목소리를 유지해서 더 몰입하게 만들어.",
+        en: "In my experience, subtitles make it more immersive by keeping the original voice.",
+        keyVocab: [
+          { en: "subtitles", ko: "자막" },
+          { en: "more immersive", ko: "더 몰입감 넘치는" },
+          { en: "original voice", ko: "배우 본래의 목소리(원음)" }
+        ],
+        note: "'immersive'는 시청각 콘텐츠의 몰입도를 묘사할 때 가장 인기 있는 핵심 형용사입니다."
+      },
+      {
+        id: 9,
+        category: "Subtitles",
+        categoryKo: "자막",
+        ko: "내 경험상, 자막은 멀티태스킹을 하게 해서 집중하기 어렵게 만들어.",
+        en: "In my experience, subtitles make it more distracting by having me multitask.",
+        keyVocab: [
+          { en: "distracting", ko: "산만하게 만드는, 방해되는" },
+          { en: "having me multitask", ko: "내가 멀티태스킹(화면과 글을 동시 확인)하게 하다" }
+        ],
+        note: "'distracting'은 집중을 흐트러뜨리는 요소를 지칭하며, 'have me multitask'는 사역의 뉘앙스를 담고 있습니다."
+      },
+      {
+        id: 10,
+        category: "Binge-watching",
+        categoryKo: "몰아보기",
+        ko: "이거 몰아볼래?",
+        en: "Do you wanna binge-watch it?",
+        keyVocab: [
+          { en: "wanna", ko: "want to의 구어 축약" },
+          { en: "binge-watch", ko: "(드라마 등을) 몰아보다" }
+        ],
+        note: "친구에게 시리즈를 한 번에 연달아 정주행하자고 제안할 때 가장 직관적이고 자연스러운 일상 회화입니다."
+      },
+      {
+        id: 11,
+        category: "Binge-watching",
+        categoryKo: "몰아보기",
+        ko: "몰아보기를 하면 원할 때 몰입감 있고 만족스럽게 볼 수 있어.",
+        en: "Binge-watching offers an immersive and satisfying viewing experience on demand.",
+        keyVocab: [
+          { en: "satisfying", ko: "만족스러운" },
+          { en: "viewing experience on demand", ko: "원할 때 누리는 시청 경험" }
+        ],
+        note: "3대 키워드인 'immersive', 'satisfying', 'on demand'가 하나로 결합된 완성도 높은 문장입니다."
+      },
+      {
+        id: 12,
+        category: "Binge-watching",
+        categoryKo: "몰아보기",
+        ko: "몰아보기는 화면 피로감이 생기는 것도 있어.",
+        en: "Binge-watching also comes with screen fatigue.",
+        keyVocab: [
+          { en: "comes with", ko: "~이 수반되다, 따르다" },
+          { en: "screen fatigue", ko: "화면/스크린 시청 피로감" }
+        ],
+        note: "화면을 오랫동안 응시해 발생하는 눈의 피로와 두통 등을 총칭하여 'screen fatigue'라고 합니다."
+      },
+      {
+        id: 13,
+        category: "Binge-watching",
+        categoryKo: "몰아보기",
+        ko: "나는 새 시즌이 나왔을 때 몰아보는 걸 정말 좋아해.",
+        en: "I love binge-watching when a new season comes out.",
+        keyVocab: [
+          { en: "when a new season comes out", ko: "새 시즌이 공개될/나올 때" }
+        ],
+        note: "'come out'은 영화, 음반, 시리즈 시즌이 대중에게 공개/출시되는 것을 뜻하는 가장 대중적인 구동사입니다."
+      },
+      {
+        id: 14,
+        category: "Binge-watching",
+        categoryKo: "몰아보기",
+        ko: "나는 한 번에 한 편씩 보는 걸 선호해.",
+        en: "I prefer taking in one episode at a time.",
+        keyVocab: [
+          { en: "prefer ~ing", ko: "~하기를 선호하다" },
+          { en: "take in", ko: "(작품을) 감상하다, 음미하다" },
+          { en: "one episode at a time", ko: "한 번에 한 편씩" }
+        ],
+        note: "'take in'은 단순히 눈으로 보는 것 이상의 깊이 있는 감상을 뜻하며, 'at a time'은 '한 번에'라는 빈출 숙어입니다."
+      },
+      {
+        id: 15,
+        category: "Travel",
+        categoryKo: "여행",
+        ko: "저는 독립성을 중요하게 생각해서 혼자 하는 여행을 선호해요.",
+        en: "I prefer solo travel because I value independence.",
+        keyVocab: [
+          { en: "prefer solo travel", ko: "혼자 하는 여행(혼행)을 선호하다" },
+          { en: "value independence", ko: "독립성을 중요하게 생각하다/가치 있게 여기다" }
+        ],
+        note: "'value'는 명사로 '가치'뿐만 아니라 타동사로 '~을 중요하게 여기다, 높이 평가하다'의 의미로 매우 자주 쓰입니다."
+      },
+      {
+        id: 16,
+        category: "Travel",
+        categoryKo: "여행",
+        ko: "저는 경험을 나누는 걸 좋아해서 함께하는 여행을 선호해요.",
+        en: "I prefer group travel because I like having shared experiences.",
+        keyVocab: [
+          { en: "prefer group travel", ko: "단체/함께하는 여행을 선호하다" },
+          { en: "shared experiences", ko: "경험을 나누는 것, 공유된 경험" }
+        ],
+        note: "'having shared experiences'는 함께 소중한 추억이나 경험을 공유한다는 뉘앙스를 자연스럽게 표현합니다."
+      },
+      {
+        id: 17,
+        category: "Travel",
+        categoryKo: "여행",
+        ko: "제가 지금까지 제일 좋았던 여행은 발리였어요.",
+        en: "My favorite trip ever was to Bali.",
+        keyVocab: [
+          { en: "favorite trip ever", ko: "지금까지/역대 가장 좋았던 여행" },
+          { en: "was to Bali", ko: "발리로 떠난 여행이었다" }
+        ],
+        note: "'ever'는 favorite 뒤에 위치하여 '역대, 지금까지 중 가장'이라는 강조 의미를 자연스럽게 전달합니다."
+      },
+      {
+        id: 18,
+        category: "Travel",
+        categoryKo: "여행",
+        ko: "나는 약간 A 타입이야.",
+        en: "I'm a bit Type A.",
+        keyVocab: [
+          { en: "a bit", ko: "약간, 조금" },
+          { en: "Type A", ko: "계획적이고 꼼꼼한 성향의 타입" }
+        ],
+        note: "영어권에서 'Type A'는 목표 지향적이고 계획을 철저히 세우는 성격을 가리킬 때 자주 쓰입니다."
+      },
+      {
+        id: 19,
+        category: "Travel",
+        categoryKo: "여행",
+        ko: "나는 시간을 최대한 알차게 쓰는 걸 좋아해.",
+        en: "I like to make the most of my time.",
+        keyVocab: [
+          { en: "make the most of", ko: "~을 최대한 활용하다/알차게 쓰다" }
+        ],
+        note: "'make the most of ~'는 주어진 시간이나 기회를 남김없이 최대한으로 활용한다는 아주 유용한 숙어입니다."
+      },
+      {
+        id: 20,
+        category: "Travel",
+        categoryKo: "여행",
+        ko: "나는 약간 B 타입이야.",
+        en: "I'm a bit Type B.",
+        keyVocab: [
+          { en: "Type B", ko: "느긋하고 즉흥적인 성향의 타입" }
+        ],
+        note: "'Type A'와 대비되어 여유롭고 유연하며 즉흥적인 성향을 표현할 때 'Type B'라고 합니다."
+      },
+      {
+        id: 21,
+        category: "Travel",
+        categoryKo: "여행",
+        ko: "나는 새로운 기회에 열려 있는 걸 좋아해.",
+        en: "I like to stay open to opportunities.",
+        keyVocab: [
+          { en: "stay open to", ko: "~에 열린 태도를 유지하다" },
+          { en: "opportunities", ko: "기회들" }
+        ],
+        note: "'be open to' 대신 'stay open to'를 쓰면 계속해서 열린 마음을 유지한다는 뉘앙스가 살아납니다."
+      },
+      {
+        id: 22,
+        category: "Travel",
+        categoryKo: "여행",
+        ko: "너는 어때?",
+        en: "What about you?",
+        keyVocab: [
+          { en: "What about you?", ko: "너는 어때? (상대방에게 되물을 때)" }
+        ],
+        note: "자신의 성향이나 의견을 말한 뒤 자연스럽게 상대방의 생각을 물어볼 때 쓰는 핵심 회화 표현입니다."
+      },
+      {
+        id: 23,
+        category: "Travel",
+        categoryKo: "여행",
+        ko: "우리 같이 여행하면 잘 맞을 것 같아!",
+        en: "I think we'd travel well together!",
+        keyVocab: [
+          { en: "we'd (we would)", ko: "우리가 ~할 것 같다 (가정/추측)" },
+          { en: "travel well together", ko: "함께 여행할 때 호흡이 잘 맞다" }
+        ],
+        note: "동사 travel 뒤에 부사 well을 붙여 여행 스타일이나 궁합이 잘 맞는다는 뜻을 자연스럽게 전달합니다."
+      },
+      {
+        id: 24,
+        category: "Travel",
+        categoryKo: "여행",
+        ko: "우리 여행 스타일이 꽤 다른 것 같아.",
+        en: "It sounds like our travel styles are quite different.",
+        keyVocab: [
+          { en: "It sounds like ~", ko: "~인 것 같아 (들은 바로는 ~처럼 들리네)" },
+          { en: "quite different", ko: "꽤 다른" }
+        ],
+        note: "상대방의 말을 듣고 부드럽게 차이점을 짚을 때 'It sounds like ~'로 시작하면 훨씬 자연스럽습니다."
+      }
+    ];
+
+    // APPLICATION STATE
+    let currentCategory = "all";
+    let activeList = [...SENTENCES];
+    let currentIndex = 0;
+    let isShuffled = false;
+    let ttsRate = 1.0;
+    let bookmarkedIds = new Set();
+    let stats = {
+      completed: 0,
+      totalAttempts: 0,
+      correctCount: 0
+    };
+
+    // Speech Recognition instance
+    let recognition = null;
+    let isListening = false;
+    let isPlayingAll = false;
+    let playAllIndex = 0;
+
+    // Initialize Web Speech Recognition
+    const SpeechRecognitionAPI = window.SpeechRecognition || window.webkitSpeechRecognition;
+    if (SpeechRecognitionAPI) {
+      recognition = new SpeechRecognitionAPI();
+      recognition.continuous = false;
+      recognition.interimResults = true;
+      recognition.lang = 'en-US';
+
+      recognition.onstart = function() {
+        isListening = true;
+        updateMicUI(true);
+      };
+
+      recognition.onresult = function(event) {
+        let transcript = '';
+        for (let i = event.resultIndex; i < event.results.length; ++i) {
+          transcript += event.results[i][0].transcript;
+        }
+        document.getElementById('spk-recognized-text').textContent = transcript;
+        document.getElementById('spk-recognized-text').classList.remove('italic', 'text-slate-400');
+        document.getElementById('spk-recognized-text').classList.add('text-white', 'font-medium');
+        document.getElementById('stt-confidence').textContent = '인식 중...';
+      };
+
+      recognition.onerror = function(event) {
+        console.warn('Speech recognition error:', event.error);
+        isListening = false;
+        updateMicUI(false);
+        showToast('마이크 인식 오류: ' + (event.error === 'not-allowed' ? '마이크 권한을 허용해주세요.' : event.error));
+        document.getElementById('stt-confidence').textContent = '오류 발생';
+      };
+
+      recognition.onend = function() {
+        isListening = false;
+        updateMicUI(false);
+        document.getElementById('stt-confidence').textContent = '인식 완료';
+      };
+    }
+
+    // TTS SPEECH SYNTHESIS HELPER
+    function speakText(text, onComplete) {
+      if (!('speechSynthesis' in window)) {
+        showToast('이 브라우저는 음성 합성(TTS)을 지원하지 않습니다.');
+        if (onComplete) onComplete();
+        return;
+      }
+      window.speechSynthesis.cancel();
+      const utter = new SpeechSynthesisUtterance(text);
+      utter.lang = 'en-US';
+      utter.rate = ttsRate;
+      utter.onend = function() {
+        if (onComplete) onComplete();
+      };
+      utter.onerror = function() {
+        if (onComplete) onComplete();
+      };
+      window.speechSynthesis.speak(utter);
+    }
+
+    // NORMALIZE TEXT FOR COMPARISON
+    function normalize(str) {
+      return str
+        .toLowerCase()
+        .replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?'"“”‘’]/g, "")
+        .replace(/\s+/g, " ")
+        .trim();
+    }
+
+    // LEVENSHTEIN ACCURACY CALCULATION
+    function calculateAccuracy(userStr, targetStr) {
+      const u = normalize(userStr);
+      const t = normalize(targetStr);
+      if (!u && !t) return 100;
+      if (!u) return 0;
+      if (u === t) return 100;
+
+      // Word-level token comparison
+      const uWords = u.split(" ");
+      const tWords = t.split(" ");
+
+      let matchCount = 0;
+      const tUsed = new Array(tWords.length).fill(false);
+
+      for (let uw of uWords) {
+        const foundIdx = tWords.findIndex((tw, idx) => !tUsed[idx] && (tw === uw || (tw.length > 3 && (tw.startsWith(uw) || uw.startsWith(tw)))));
+        if (foundIdx !== -1) {
+          matchCount++;
+          tUsed[foundIdx] = true;
+        }
+      }
+
+      const precision = matchCount / uWords.length;
+      const recall = matchCount / tWords.length;
+      const f1 = (precision + recall) === 0 ? 0 : (2 * precision * recall) / (precision + recall);
+      return Math.round(f1 * 100);
+    }
+
+    // WORD-BY-WORD DIFF HIGHLIGHTING
+    function renderDiff(userStr, targetStr) {
+      const uWords = userStr.trim().split(/\s+/);
+      const tWords = targetStr.trim().split(/\s+/);
+
+      const normalizedT = tWords.map(w => normalize(w));
+      const userHtml = uWords.map(w => {
+        const nw = normalize(w);
+        if (normalizedT.includes(nw)) {
+          return `<span class="text-emerald-400 font-semibold">${w}</span>`;
+        } else {
+          return `<span class="text-rose-400 underline decoration-rose-500/60 font-semibold" title="불일치">${w}</span>`;
+        }
+      }).join(" ");
+
+      return userHtml;
+    }
+
+    // TOAST HELPER
+    function showToast(msg, icon = '💡') {
+      const toast = document.getElementById('toast');
+      document.getElementById('toast-icon').textContent = icon;
+      document.getElementById('toast-msg').textContent = msg;
+      toast.classList.remove('translate-y-20', 'opacity-0');
+      toast.classList.add('translate-y-0', 'opacity-100');
+      setTimeout(() => {
+        toast.classList.remove('translate-y-0', 'opacity-100');
+        toast.classList.add('translate-y-20', 'opacity-0');
+      }, 2500);
+    }
+
+    // FILTER CATEGORY
+    function setCategory(cat) {
+      currentCategory = cat;
+      document.querySelectorAll('.cat-filter-btn').forEach(btn => {
+        const match = btn.getAttribute('data-cat') === cat;
+        if (match) {
+          btn.className = "cat-filter-btn px-3 py-1 rounded-lg text-xs font-semibold bg-indigo-500/20 text-indigo-300 border border-indigo-500/40 transition";
+        } else {
+          btn.className = "cat-filter-btn px-3 py-1 rounded-lg text-xs font-semibold bg-slate-800/70 text-slate-300 border border-slate-700/50 hover:bg-slate-700 transition";
+        }
+      });
+
+      if (cat === "all") {
+        activeList = [...SENTENCES];
+      } else {
+        activeList = SENTENCES.filter(s => s.category === cat);
+      }
+      if (isShuffled) {
+        fisherYatesShuffle(activeList);
+      }
+      currentIndex = 0;
+      updateUI();
+      renderAllSentencesList();
+      showToast(`${cat === 'all' ? '전체' : cat} (${activeList.length}문장) 목록으로 변경되었습니다.`);
+    }
+
+    // UPDATE UI FOR CURRENT INDEX
+    function updateUI() {
+      if (activeList.length === 0) return;
+      const current = activeList[currentIndex];
+
+      // Update Header Progress
+      document.getElementById('stat-total').textContent = activeList.length;
+      document.getElementById('current-index-label').textContent = `문장 ${currentIndex + 1} / ${activeList.length}`;
+      document.getElementById('current-badge-cat').textContent = current.categoryKo;
+      document.getElementById('quiz-progress-bar').style.width = `${((currentIndex + 1) / activeList.length) * 100}%`;
+
+      // Update Bookmark Star
+      const isBookmarked = bookmarkedIds.has(current.id);
+      const starIcon = document.getElementById('star-icon');
+      if (isBookmarked) {
+        starIcon.classList.remove('fill-none', 'text-slate-400');
+        starIcon.classList.add('fill-amber-400', 'text-amber-400');
+      } else {
+        starIcon.classList.add('fill-none', 'text-slate-400');
+        starIcon.classList.remove('fill-amber-400', 'text-amber-400');
+      }
+
+      // Typing View elements
+      document.getElementById('korean-prompt-text').textContent = current.ko;
+      document.getElementById('typing-input').value = '';
+      document.getElementById('hint-box').classList.add('hidden');
+      document.getElementById('feedback-panel').classList.add('hidden');
+
+      // Prepare Hints
+      const words = current.en.split(' ');
+      const firstLetterMask = words.map(w => {
+        if (w.length <= 1) return w;
+        return w[0] + '_'.repeat(w.length - 1);
+      }).join(' ');
+      document.getElementById('hint-first-letter').textContent = firstLetterMask;
+      document.getElementById('hint-key-words').textContent = '주요 단어: ' + current.keyVocab.map(v => v.en).join(', ');
+
+      // Speaking View elements
+      document.getElementById('spk-badge-cat').textContent = current.categoryKo;
+      document.getElementById('spk-index-label').textContent = `문장 ${currentIndex + 1} / ${activeList.length}`;
+      document.getElementById('spk-korean-prompt').textContent = current.ko;
+      document.getElementById('spk-recognized-text').textContent = '(마이크를 누르고 말하면 여기에 텍스트가 표시됩니다)';
+      document.getElementById('spk-recognized-text').className = 'text-base text-slate-400 italic min-h-[2.5rem] flex items-center';
+      document.getElementById('stt-confidence').textContent = '대기 중';
+      document.getElementById('spk-result-panel').classList.add('hidden');
+
+      // Flashcard View elements
+      document.getElementById('fc-cat-badge').textContent = current.categoryKo;
+      document.getElementById('fc-korean-text').textContent = current.ko;
+      document.getElementById('fc-english-text').textContent = current.en;
+      document.getElementById('fc-counter').textContent = `${currentIndex + 1} / ${activeList.length}`;
+      const fcVocab = document.getElementById('fc-keyvocab-list');
+      fcVocab.innerHTML = current.keyVocab.map(v => `
+        <span class="px-2 py-0.5 rounded-md bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 text-xs">
+          ${v.en} <span class="text-slate-400 font-normal">(${v.ko})</span>
+        </span>
+      `).join('');
+      // unflip card
+      document.getElementById('fc-container').classList.remove('flipped');
+    }
+
+    // CHECK TYPING ANSWER
+    function checkAnswer() {
+      const current = activeList[currentIndex];
+      const userText = document.getElementById('typing-input').value.trim();
+
+      if (!userText) {
+        showToast('문장을 먼저 타이핑해주세요!', '⚠️');
+        document.getElementById('typing-input').focus();
+        return;
+      }
+
+      stats.totalAttempts++;
+      const score = calculateAccuracy(userText, current.en);
+      const isPerfect = score >= 90;
+      if (isPerfect) stats.correctCount++;
+      stats.completed = Math.max(stats.completed, currentIndex + 1);
+
+      // Update Global Stats Header
+      const acc = Math.round((stats.correctCount / stats.totalAttempts) * 100);
+      document.getElementById('stat-accuracy').textContent = `${acc}%`;
+      document.getElementById('stat-completed').textContent = stats.completed;
+
+      // Populate Feedback Panel
+      const panel = document.getElementById('feedback-panel');
+      const banner = document.getElementById('feedback-banner');
+      const iconWrap = document.getElementById('feedback-icon-wrap');
+      const title = document.getElementById('feedback-title');
+      const subtitle = document.getElementById('feedback-subtitle');
+      const scoreLabel = document.getElementById('feedback-score');
+
+      scoreLabel.textContent = `${score}%`;
+
+      if (isPerfect) {
+        banner.className = "p-4 rounded-2xl flex items-center justify-between gap-3 bg-emerald-500/10 border border-emerald-500/30";
+        iconWrap.className = "w-10 h-10 rounded-xl flex items-center justify-center font-bold text-lg bg-emerald-500/20 text-emerald-400";
+        iconWrap.textContent = "✓";
+        title.textContent = score === 100 ? "완벽한 정답입니다! (Perfect)" : "훌륭합니다! 거의 완벽해요.";
+        subtitle.textContent = "자연스러운 억양과 발음으로 한 번 더 따라 읽어보세요.";
+      } else if (score >= 60) {
+        banner.className = "p-4 rounded-2xl flex items-center justify-between gap-3 bg-amber-500/10 border border-amber-500/30";
+        iconWrap.className = "w-10 h-10 rounded-xl flex items-center justify-center font-bold text-lg bg-amber-500/20 text-amber-400";
+        iconWrap.textContent = "▲";
+        title.textContent = "좋은 시도입니다! 조금만 더 다듬어보세요.";
+        subtitle.textContent = "아래 원문과 비교하여 불일치한 단어(빨간색)를 점검하세요.";
+      } else {
+        banner.className = "p-4 rounded-2xl flex items-center justify-between gap-3 bg-rose-500/10 border border-rose-500/30";
+        iconWrap.className = "w-10 h-10 rounded-xl flex items-center justify-center font-bold text-lg bg-rose-500/20 text-rose-400";
+        iconWrap.textContent = "✕";
+        title.textContent = "다시 한 번 도전해보세요!";
+        subtitle.textContent = "원문 모범 답안을 확인하고 소리 내어 타이핑해보세요.";
+      }
+
+      document.getElementById('diff-user-text').innerHTML = renderDiff(userText, current.en);
+      document.getElementById('diff-target-text').textContent = current.en;
+
+      // Key Vocab Badges
+      const vocabWrap = document.getElementById('feedback-vocab-list');
+      vocabWrap.innerHTML = current.keyVocab.map(v => `
+        <span class="px-2.5 py-1 rounded-lg bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 text-xs font-semibold">
+          <strong>${v.en}</strong>: ${v.ko}
+        </span>
+      `).join('');
+
+      document.getElementById('feedback-explanation').textContent = current.note;
+      panel.classList.remove('hidden');
+
+      // Auto TTS on perfect
+      if (isPerfect) {
+        speakText(current.en);
+      }
+    }
+
+    // CHECK SPEAKING RESULT
+    function checkSpeaking() {
+      const current = activeList[currentIndex];
+      const recognized = document.getElementById('spk-recognized-text').textContent.trim();
+      if (!recognized || recognized.startsWith('(마이크')) {
+        showToast('먼저 마이크를 누르고 영어로 발화해주세요.', '🎙️');
+        return;
+      }
+
+      const score = calculateAccuracy(recognized, current.en);
+      const panel = document.getElementById('spk-result-panel');
+      const banner = document.getElementById('spk-score-banner');
+      const title = document.getElementById('spk-score-title');
+      const desc = document.getElementById('spk-score-desc');
+      const scorePercent = document.getElementById('spk-score-percent');
+
+      scorePercent.textContent = `${score}%`;
+      if (score >= 80) {
+        banner.className = "p-3.5 rounded-2xl flex items-center justify-between bg-emerald-500/10 border border-emerald-500/30";
+        title.textContent = "정확한 영어 발화입니다!";
+        desc.textContent = "원어민 수준의 어순과 표현이 감지되었습니다.";
+      } else {
+        banner.className = "p-3.5 rounded-2xl flex items-center justify-between bg-amber-500/10 border border-amber-500/30";
+        title.textContent = "발화가 인식되었으나 차이가 있습니다.";
+        desc.textContent = "모범 답안을 듣고 다시 발음해보세요.";
+      }
+
+      document.getElementById('spk-target-answer').textContent = current.en;
+      panel.classList.remove('hidden');
+    }
+
+    // MIC UI TOGGLE
+    function updateMicUI(listening) {
+      const pulse = document.getElementById('mic-pulse-ring');
+      const label = document.getElementById('mic-status-label');
+      const micBtn = document.getElementById('btn-spk-mic');
+
+      if (listening) {
+        pulse.classList.remove('hidden');
+        label.textContent = "음성을 듣고 있습니다... 영어로 말씀하세요!";
+        label.className = "text-sm font-bold text-rose-400 mt-4 animate-pulse";
+        micBtn.classList.remove('from-indigo-600', 'to-violet-600');
+        micBtn.classList.add('from-rose-600', 'to-red-500');
+      } else {
+        pulse.classList.add('hidden');
+        label.textContent = "마이크 버튼을 누르고 영어로 발화하세요";
+        label.className = "text-sm font-medium text-slate-300 mt-4";
+        micBtn.classList.add('from-indigo-600', 'to-violet-600');
+        micBtn.classList.remove('from-rose-600', 'to-red-500');
+      }
+    }
+
+    // RENDER ALL SENTENCES GRID
+    function renderAllSentencesList() {
+      const container = document.getElementById('all-sentences-grid');
+      const searchVal = document.getElementById('list-search-input').value.toLowerCase().trim();
+
+      const filtered = activeList.filter(s => {
+        if (!searchVal) return true;
+        return s.ko.toLowerCase().includes(searchVal) ||
+               s.en.toLowerCase().includes(searchVal) ||
+               s.categoryKo.toLowerCase().includes(searchVal) ||
+               s.keyVocab.some(v => v.en.toLowerCase().includes(searchVal) || v.ko.toLowerCase().includes(searchVal));
+      });
+
+      if (filtered.length === 0) {
+        container.innerHTML = `
+          <div class="text-center py-12 text-slate-500 text-sm">
+            검색 조건에 맞는 문장이 없습니다.
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = filtered.map((item, idx) => `
+        <div class="p-4 sm:p-5 rounded-2xl bg-slate-900/90 border border-slate-800 hover:border-slate-700 transition flex flex-col sm:flex-row sm:items-start justify-between gap-4">
+          <div class="space-y-2 flex-1">
+            <div class="flex items-center gap-2">
+              <span class="px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-indigo-500/20 text-indigo-400 border border-indigo-500/30">
+                ${item.categoryKo}
+              </span>
+              <span class="text-xs text-slate-500 font-medium">#${item.id}</span>
+            </div>
+            <p class="text-xs text-slate-400 font-medium">${item.ko}</p>
+            <p class="text-base font-bold text-white tracking-wide">${item.en}</p>
+            <div class="flex flex-wrap gap-1.5 pt-1">
+              ${item.keyVocab.map(v => `
+                <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 text-[11px]">
+                  <strong>${v.en}</strong>: ${v.ko}
+                </span>
+              `).join('')}
+            </div>
+          </div>
+          <div class="flex items-center gap-2 shrink-0">
+            <button onclick="speakItem(${item.id})" class="p-2.5 rounded-xl bg-slate-800 hover:bg-indigo-600 text-slate-300 hover:text-white transition" title="발음 듣기">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"/></svg>
+            </button>
+            <button onclick="jumpToPractice(${item.id})" class="px-3 py-2 rounded-xl text-xs font-semibold bg-indigo-600/30 text-indigo-300 hover:bg-indigo-600 hover:text-white transition">
+              연습하기
+            </button>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // GLOBAL ACTIONS EXPOSED FOR INLINE HANDLERS
+    window.speakItem = function(id) {
+      const item = SENTENCES.find(s => s.id === id);
+      if (item) speakText(item.en);
+    };
+
+    window.jumpToPractice = function(id) {
+      const targetIdx = activeList.findIndex(s => s.id === id);
+      if (targetIdx !== -1) {
+        currentIndex = targetIdx;
+      } else {
+        setCategory('all');
+        currentIndex = SENTENCES.findIndex(s => s.id === id);
+      }
+      switchTab('typing');
+      updateUI();
+    };
+
+    // TAB SWITCHING
+    function switchTab(tabName) {
+      document.querySelectorAll('.view-panel').forEach(el => el.classList.add('hidden'));
+      document.querySelectorAll('.nav-tab').forEach(el => {
+        el.className = "nav-tab px-3 py-1.5 rounded-lg text-slate-400 hover:text-white transition-all flex items-center gap-1.5";
+      });
+
+      const activeBtn = document.getElementById(`nav-${tabName}`);
+      if (activeBtn) {
+        activeBtn.className = "nav-tab px-3 py-1.5 rounded-lg text-white bg-indigo-600 shadow transition-all flex items-center gap-1.5";
+      }
+
+      const activeView = document.getElementById(`view-${tabName}`);
+      if (activeView) activeView.classList.remove('hidden');
+
+      if (tabName === 'list') {
+        renderAllSentencesList();
+      }
+    }
+
+    // EVENT LISTENERS INITIALIZATION
+    document.addEventListener('DOMContentLoaded', () => {
+      // Tab Buttons
+      document.getElementById('nav-typing').addEventListener('click', () => switchTab('typing'));
+      document.getElementById('nav-speaking').addEventListener('click', () => switchTab('speaking'));
+      document.getElementById('nav-flashcard').addEventListener('click', () => switchTab('flashcard'));
+      document.getElementById('nav-list').addEventListener('click', () => switchTab('list'));
+
+      // Category filters
+      document.getElementById('category-filter-bar').addEventListener('click', (e) => {
+        const btn = e.target.closest('.cat-filter-btn');
+        if (btn) setCategory(btn.getAttribute('data-cat'));
+      });
+
+      // Typing View events
+      document.getElementById('btn-submit-answer').addEventListener('click', checkAnswer);
+      document.getElementById('typing-input').addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' && !e.shiftKey) {
+          e.preventDefault();
+          checkAnswer();
+        }
+      });
+
+      document.getElementById('btn-show-hint').addEventListener('click', () => {
+        const box = document.getElementById('hint-box');
+        box.classList.toggle('hidden');
+      });
+
+      document.getElementById('btn-clear-input').addEventListener('click', () => {
+        document.getElementById('typing-input').value = '';
+        document.getElementById('typing-input').focus();
+      });
+
+      document.getElementById('btn-reveal-answer').addEventListener('click', () => {
+        const current = activeList[currentIndex];
+        document.getElementById('typing-input').value = current.en;
+        checkAnswer();
+      });
+
+      document.getElementById('btn-play-tts').addEventListener('click', () => {
+        const current = activeList[currentIndex];
+        speakText(current.en);
+      });
+
+      document.getElementById('btn-diff-play-tts').addEventListener('click', () => {
+        const current = activeList[currentIndex];
+        speakText(current.en);
+      });
+
+      // Prev / Next Navigation
+      document.getElementById('btn-prev-question').addEventListener('click', () => {
+        if (currentIndex > 0) {
+          currentIndex--;
+          updateUI();
+        } else {
+          showToast('첫 번째 문장입니다.');
+        }
+      });
+
+      document.getElementById('btn-next-question').addEventListener('click', () => {
+        if (currentIndex < activeList.length - 1) {
+          currentIndex++;
+          updateUI();
+        } else {
+          showToast('마지막 문장까지 완료했습니다! 대단해요!', '🎉');
+        }
+      });
+
+      function fisherYatesShuffle(arr) {
+        for (let i = arr.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [arr[i], arr[j]] = [arr[j], arr[i]];
+        }
+        return arr;
+      }
+
+      function updateShuffleIndicator() {
+        const valEl = document.getElementById('global-shuffle-val');
+        const btnEl = document.getElementById('global-shuffle-toggle');
+        if (isShuffled) {
+          valEl.textContent = 'ON';
+          valEl.className = 'text-emerald-400 font-bold';
+          btnEl.classList.add('border-emerald-500/40', 'bg-emerald-500/10');
+        } else {
+          valEl.textContent = 'OFF';
+          valEl.className = 'text-slate-300';
+          btnEl.classList.remove('border-emerald-500/40', 'bg-emerald-500/10');
+        }
+      }
+
+      function shuffleActiveList() {
+        isShuffled = true;
+        fisherYatesShuffle(activeList);
+        currentIndex = 0;
+        updateShuffleIndicator();
+        updateUI();
+        renderAllSentencesList();
+        showToast('문장 순서가 무작위로 섞였습니다.', '🔀');
+      }
+
+      document.getElementById('global-shuffle-toggle').addEventListener('click', () => {
+        if (isShuffled) {
+          isShuffled = false;
+          activeList = currentCategory === 'all' ? [...SENTENCES] : SENTENCES.filter(s => s.category === currentCategory);
+          currentIndex = 0;
+          updateShuffleIndicator();
+          updateUI();
+          renderAllSentencesList();
+          showToast('원래 순서로 되돌렸습니다.', '📋');
+        } else {
+          shuffleActiveList();
+        }
+      });
+
+      document.getElementById('btn-shuffle-order').addEventListener('click', shuffleActiveList);
+      document.getElementById('btn-spk-shuffle').addEventListener('click', shuffleActiveList);
+      document.getElementById('btn-fc-shuffle').addEventListener('click', shuffleActiveList);
+      document.getElementById('btn-list-shuffle').addEventListener('click', shuffleActiveList);
+
+      document.getElementById('btn-toggle-bookmark').addEventListener('click', () => {
+        const current = activeList[currentIndex];
+        if (bookmarkedIds.has(current.id)) {
+          bookmarkedIds.delete(current.id);
+          showToast('북마크가 해제되었습니다.');
+        } else {
+          bookmarkedIds.add(current.id);
+          showToast('중요 문장으로 북마크되었습니다!', '⭐');
+        }
+        updateUI();
+      });
+
+      // TTS Speed toggle
+      document.getElementById('tts-speed-toggle').addEventListener('click', () => {
+        if (ttsRate === 1.0) ttsRate = 0.8;
+        else if (ttsRate === 0.8) ttsRate = 1.2;
+        else ttsRate = 1.0;
+        document.getElementById('tts-speed-val').textContent = `${ttsRate.toFixed(1)}x`;
+        showToast(`발음 속도: ${ttsRate.toFixed(1)}x`);
+      });
+
+      // Speaking View events
+      document.getElementById('btn-spk-mic').addEventListener('click', () => {
+        if (!recognition) {
+          showToast('현재 브라우저에서는 Web Speech 음성 인식을 지원하지 않습니다. 크롬 브라우저를 이용하시거나 타이핑 모드를 활용해보세요.', '⚠️');
+          return;
+        }
+        if (isListening) {
+          recognition.stop();
+        } else {
+          try {
+            recognition.start();
+          } catch(err) {
+            console.warn(err);
+          }
+        }
+      });
+
+      document.getElementById('btn-spk-check').addEventListener('click', checkSpeaking);
+      document.getElementById('btn-spk-listen-target').addEventListener('click', () => {
+        const current = activeList[currentIndex];
+        speakText(current.en);
+      });
+      document.getElementById('btn-spk-reveal').addEventListener('click', () => {
+        const current = activeList[currentIndex];
+        document.getElementById('spk-recognized-text').textContent = current.en;
+        document.getElementById('spk-recognized-text').className = 'text-base font-bold text-white min-h-[2.5rem] flex items-center';
+        checkSpeaking();
+      });
+
+      document.getElementById('btn-spk-prev').addEventListener('click', () => {
+        if (currentIndex > 0) {
+          currentIndex--;
+          updateUI();
+        }
+      });
+      document.getElementById('btn-spk-next').addEventListener('click', () => {
+        if (currentIndex < activeList.length - 1) {
+          currentIndex++;
+          updateUI();
+        }
+      });
+
+      // Flashcard View events
+      document.getElementById('fc-container').addEventListener('click', (e) => {
+        if (e.target.closest('#btn-fc-audio')) return;
+        document.getElementById('fc-container').classList.toggle('flipped');
+      });
+
+      document.getElementById('btn-fc-audio').addEventListener('click', (e) => {
+        e.stopPropagation();
+        const current = activeList[currentIndex];
+        speakText(current.en);
+      });
+
+      document.getElementById('btn-fc-prev').addEventListener('click', () => {
+        if (currentIndex > 0) {
+          currentIndex--;
+          updateUI();
+        }
+      });
+      document.getElementById('btn-fc-next').addEventListener('click', () => {
+        if (currentIndex < activeList.length - 1) {
+          currentIndex++;
+          updateUI();
+        }
+      });
+
+      // Search List Filter
+      document.getElementById('list-search-input').addEventListener('input', renderAllSentencesList);
+
+      // Play All Continuous TTS
+      document.getElementById('btn-list-play-all').addEventListener('click', () => {
+        if (isPlayingAll) {
+          isPlayingAll = false;
+          window.speechSynthesis.cancel();
+          document.getElementById('list-play-all-label').textContent = '전체 연속 듣기';
+          showToast('연속 듣기를 중단했습니다.');
+          return;
+        }
+
+        isPlayingAll = true;
+        playAllIndex = 0;
+        document.getElementById('list-play-all-label').textContent = '듣기 정지 (중단)';
+        showToast('전체 문장 연속 재생을 시작합니다.');
+
+        function playNext() {
+          if (!isPlayingAll || playAllIndex >= activeList.length) {
+            isPlayingAll = false;
+            document.getElementById('list-play-all-label').textContent = '전체 연속 듣기';
+            return;
+          }
+          const item = activeList[playAllIndex];
+          playAllIndex++;
+          speakText(item.en, () => {
+            setTimeout(playNext, 1200);
+          });
+        }
+        playNext();
+      });
+
+      // Initial Render
+      updateUI();
+    });
+  </script>
+</body>
+</html>
