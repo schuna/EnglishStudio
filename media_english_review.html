@@ -5,6 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>미디어 영어 표현 복습 스튜디오</title>
   <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
+  <script>
+    (function() {
+      const saved = localStorage.getItem('englishStudioTheme');
+      if (saved === 'dark' || (!saved && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      }
+    })();
+  </script>
   <script src="https://cdn.tailwindcss.com/3.4.17"></script>
   <style>
     :root {
@@ -21,6 +29,7 @@
       --ink-disabled: oklch(0.779 0.016 251);
 
       --accent-primary: oklch(0.620 0.191 258);
+      --accent-primary-text: oklch(0.620 0.191 258);
       --accent-primary-weak: oklch(0.959 0.020 250);
       --accent-danger: oklch(0.641 0.208 21);
       --accent-danger-weak: oklch(0.940 0.040 18);
@@ -30,6 +39,11 @@
       --accent-warning-weak: oklch(0.955 0.040 75);
       --accent-star: oklch(0.850 0.154 82);
 
+      --chip-active-bg: oklch(0.237 0.020 258);
+      --chip-active-text: oklch(1.000 0.000 0);
+      --toast-bg: oklch(0.237 0.020 258);
+      --toast-text: oklch(1.000 0.000 0);
+
       --press-overlay: oklch(0.000 0.000 0 / 0.26);
       --shadow-1: 0 1px 2px oklch(0.155 0.060 261 / 0.04), 0 1px 1px oklch(0.155 0.060 261 / 0.04);
       --shadow-toast: 0 8px 24px oklch(0.155 0.060 261 / 0.16);
@@ -38,6 +52,40 @@
       --dur-base: 200ms;
       --dur-slow: 320ms;
       --ease-default: cubic-bezier(0.22, 0.61, 0.36, 1);
+    }
+
+    html.dark {
+      --bg-canvas: oklch(0.174 0.006 286);
+      --bg-surface: oklch(0.247 0.013 285);
+      --bg-subtle: oklch(0.297 0.016 285);
+      --bg-hover: oklch(0.297 0.016 285);
+      --border-hairline: oklch(0.361 0.019 285);
+      --border-strong: oklch(0.425 0.020 286);
+
+      --ink-primary: oklch(1.000 0.000 0);
+      --ink-secondary: oklch(0.818 0.004 286);
+      --ink-tertiary: oklch(0.596 0.014 286);
+      --ink-disabled: oklch(0.500 0.017 286);
+
+      --accent-primary: oklch(0.630 0.192 258);
+      --accent-primary-text: oklch(0.750 0.140 255);
+      --accent-primary-weak: oklch(0.300 0.062 267);
+      --accent-danger: oklch(0.639 0.209 21);
+      --accent-danger-weak: oklch(0.270 0.060 22);
+      --accent-success: oklch(0.680 0.150 155);
+      --accent-success-weak: oklch(0.260 0.050 155);
+      --accent-warning: oklch(0.816 0.158 74);
+      --accent-warning-weak: oklch(0.280 0.055 70);
+      --accent-star: oklch(0.816 0.158 74);
+
+      --chip-active-bg: oklch(1.000 0.000 0);
+      --chip-active-text: oklch(0.174 0.006 286);
+      --toast-bg: oklch(0.297 0.016 285);
+      --toast-text: oklch(1.000 0.000 0);
+
+      --press-overlay: oklch(1.000 0.000 0 / 0.16);
+      --shadow-1: 0 1px 2px oklch(0.000 0.000 0 / 0.25);
+      --shadow-toast: 0 8px 24px oklch(0.000 0.000 0 / 0.40);
     }
 
     body {
@@ -184,7 +232,7 @@
     <section class="surface-card flex flex-wrap items-center justify-between gap-3 p-3.5 rounded-[20px]">
       <!-- Category Chips (34px full pill) -->
       <div class="flex flex-wrap items-center gap-1.5" id="category-filter-bar">
-        <button data-cat="all" class="cat-filter-btn h-[34px] px-3.5 rounded-full text-[13px] font-semibold bg-[var(--ink-primary)] text-white transition-colors duration-200">전체 (24)</button>
+        <button data-cat="all" class="cat-filter-btn h-[34px] px-3.5 rounded-full text-[13px] font-semibold bg-[var(--chip-active-bg)] text-[var(--chip-active-text)] transition-colors duration-200">전체 (24)</button>
         <button data-cat="Streaming" class="cat-filter-btn h-[34px] px-3.5 rounded-full text-[13px] font-semibold bg-[var(--bg-surface)] text-[var(--ink-secondary)] border border-[var(--border-hairline)] hover:bg-[var(--bg-subtle)] transition-colors duration-200">스트리밍 (3)</button>
         <button data-cat="Reboots" class="cat-filter-btn h-[34px] px-3.5 rounded-full text-[13px] font-semibold bg-[var(--bg-surface)] text-[var(--ink-secondary)] border border-[var(--border-hairline)] hover:bg-[var(--bg-subtle)] transition-colors duration-200">리부트 (2)</button>
         <button data-cat="Dubbing" class="cat-filter-btn h-[34px] px-3.5 rounded-full text-[13px] font-semibold bg-[var(--bg-surface)] text-[var(--ink-secondary)] border border-[var(--border-hairline)] hover:bg-[var(--bg-subtle)] transition-colors duration-200">더빙 (2)</button>
@@ -211,7 +259,13 @@
         </button>
         <!-- TTS speed toggle -->
         <button id="tts-speed-toggle" class="btn-press h-8 px-2.5 rounded-[10px] bg-[var(--bg-subtle)] border border-[var(--border-hairline)] hover:bg-[var(--border-hairline)] text-[12px] font-semibold text-[var(--ink-secondary)]" title="발음 재생 속도 전환">
-          속도 <span id="tts-speed-val" class="text-[var(--accent-primary)] font-bold">1.0x</span>
+          속도 <span id="tts-speed-val" class="text-[var(--accent-primary-text)] font-bold">1.0x</span>
+        </button>
+        <!-- Theme toggle -->
+        <button id="theme-toggle" class="btn-press h-8 px-2.5 rounded-[10px] bg-[var(--bg-subtle)] border border-[var(--border-hairline)] hover:bg-[var(--border-hairline)] text-[12px] font-semibold text-[var(--ink-secondary)] flex items-center gap-1.5" title="다크/라이트 모드 전환">
+          <svg id="theme-icon-moon" class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="1.67" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+          <svg id="theme-icon-sun" class="w-3.5 h-3.5 hidden text-[var(--accent-star)]" fill="none" stroke="currentColor" stroke-width="1.67" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+          <span id="theme-toggle-label" class="text-[var(--ink-primary)]">다크</span>
         </button>
       </div>
     </section>
@@ -563,7 +617,7 @@
 
   <!-- Toast Notification -->
   <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-200 pointer-events-none">
-    <div class="bg-[var(--ink-primary)] text-white px-4 py-3 rounded-[14px] shadow-[var(--shadow-toast)] flex items-center gap-2 text-[13px] font-medium">
+    <div class="bg-[var(--toast-bg)] text-[var(--toast-text)] border border-[var(--border-hairline)] px-4 py-3 rounded-[14px] shadow-[var(--shadow-toast)] flex items-center gap-2 text-[13px] font-medium">
       <span id="toast-icon" class="w-5 h-5 rounded-full bg-[var(--accent-success)] text-white flex items-center justify-center text-[11px] font-bold shrink-0">✓</span>
       <span id="toast-msg">알림 메시지</span>
     </div>
@@ -1025,7 +1079,7 @@
       document.querySelectorAll('.cat-filter-btn').forEach(btn => {
         const match = btn.getAttribute('data-cat') === cat;
         if (match) {
-          btn.className = "cat-filter-btn h-[34px] px-3.5 rounded-full text-[13px] font-semibold bg-[var(--ink-primary)] text-white transition-colors duration-200";
+          btn.className = "cat-filter-btn h-[34px] px-3.5 rounded-full text-[13px] font-semibold bg-[var(--chip-active-bg)] text-[var(--chip-active-text)] transition-colors duration-200";
         } else {
           btn.className = "cat-filter-btn h-[34px] px-3.5 rounded-full text-[13px] font-semibold bg-[var(--bg-surface)] text-[var(--ink-secondary)] border border-[var(--border-hairline)] hover:bg-[var(--bg-subtle)] transition-colors duration-200";
         }
@@ -1560,6 +1614,23 @@
         }
         playNext();
       });
+
+      // Theme Toggle (Light / Dark)
+      function syncThemeButton() {
+        const isDark = document.documentElement.classList.contains('dark');
+        document.getElementById('theme-icon-moon').classList.toggle('hidden', isDark);
+        document.getElementById('theme-icon-sun').classList.toggle('hidden', !isDark);
+        document.getElementById('theme-toggle-label').textContent = isDark ? '라이트' : '다크';
+      }
+
+      document.getElementById('theme-toggle').addEventListener('click', () => {
+        const isDark = document.documentElement.classList.toggle('dark');
+        localStorage.setItem('englishStudioTheme', isDark ? 'dark' : 'light');
+        syncThemeButton();
+        showToast(isDark ? '다크 모드로 전환했어요.' : '라이트 모드로 전환했어요.');
+      });
+
+      syncThemeButton();
 
       // Initial Render
       updateUI();
